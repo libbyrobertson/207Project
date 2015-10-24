@@ -1,7 +1,8 @@
 # 207Project
-Elizabeth Robertson
-200351424
-October 24 2015
+ - Elizabeth Robertson
+ - 200351424
+ - October 24 2015
+
 This is the repository for my Project.
 In this project I'm going to make music. 
 
