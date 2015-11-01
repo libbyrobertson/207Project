@@ -87,14 +87,13 @@ void loop()
   //pull down
   if (buttonState1 == HIGH)
   {
-    //Perform MIDI magic
-    //Play MIDI file (1* musicState)
-
-    
-    // turn LED on:
-    //digitalWrite(ledPin1, HIGH);//turn one on
-    //digitalWrite(ledPin2,LOW);//turn the other off
-    //keeping this code for future LED use
+    for (int note = 0x1E; note < 0x5A; note == )
+    {
+      noteOn(0x90, note, 0x45);//45 is middle velocity
+      delay(100)
+      noteOn(0x90, note, 0x00);//silent velocity
+      delay (100);
+    }
   }
 
  
@@ -123,5 +122,12 @@ void loop()
     //Midi File (5*musicState)
   }
 
+}
+void noteOn(int cmd, int pitch, int velocity)
+{
+  serial.write (cmd);
+  serial.wrtie(pitch);
+  serial.write(velocity);//all this was accumulated from the arduino website
+  //I take no credit
 }
 
